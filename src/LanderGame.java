@@ -57,8 +57,7 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
    GraphicsContext g2d;
    
    // Player images
-   static Image landingLegs = new Image("/images/landingLegsExtended.png");// = new Image("/src/images/landingLegsExtended.png");
-   
+   //static Image landingLegs = new Image("landingLegsExtended.png");// = new Image("/src/images/landingLegsExtended.png");
    // Variables used for correct drawing of images
    double imageXOffset = 0;
    double xDrawPosition = 0;
@@ -67,8 +66,8 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
    MarsModule player;
    double xInitial = 50;
    double yInitial = 50;
-   double playerWidth = landingLegs.getWidth(); 
-   double playerHeight = landingLegs.getHeight();
+   //double playerWidth = 50;//landingLegs.getWidth(); 
+   //double playerHeight = 50;//landingLegs.getHeight();
    
    Rectangle playerHitBox;
    boolean playerCloseToGround = false;
@@ -153,8 +152,10 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
       normalizeAllLines(land); 
       
       // initialize the player
-      player = new MarsModule(
-                              0, map.getPlayerStartY(), playerWidth, playerHeight, 90, 
+      Image landingLegs = new Image("/images/landingLegsExtended.png");
+      double playerWidth = landingLegs.getWidth();
+      double playerHeight = landingLegs.getHeight();
+      player = new MarsModule(0, map.getPlayerStartY(), playerWidth, playerHeight, 90, 
                               thrustDecelerationRate, rotateDecelerationRate, thrustCap
                               );      
       
