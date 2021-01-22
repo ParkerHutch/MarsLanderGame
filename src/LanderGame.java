@@ -25,10 +25,6 @@ import javafx.scene.layout.*;
 import javafx.stage.Screen;
 import javafx.scene.text.*;
 
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaPlayer.Status;
-
 import java.io.*;
 
 public class LanderGame extends Application implements EventHandler<KeyEvent> {
@@ -66,8 +62,6 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
    MarsModule player;
    double xInitial = 50;
    double yInitial = 50;
-   //double playerWidth = 50;//landingLegs.getWidth(); 
-   //double playerHeight = 50;//landingLegs.getHeight();
    
    Rectangle playerHitBox;
    boolean playerCloseToGround = false;
