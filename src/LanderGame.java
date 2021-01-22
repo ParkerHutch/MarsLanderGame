@@ -25,10 +25,6 @@ import javafx.scene.layout.*;
 import javafx.stage.Screen;
 import javafx.scene.text.*;
 
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaPlayer.Status;
-
 import java.io.*;
 
 public class LanderGame extends Application implements EventHandler<KeyEvent> {
@@ -57,8 +53,7 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
    GraphicsContext g2d;
    
    // Player images
-   static Image landingLegs = new Image("/images/landingLegsExtended.png");// = new Image("/src/images/landingLegsExtended.png");
-   
+   //static Image landingLegs = new Image("landingLegsExtended.png");// = new Image("/src/images/landingLegsExtended.png");
    // Variables used for correct drawing of images
    double imageXOffset = 0;
    double xDrawPosition = 0;
@@ -67,8 +62,6 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
    MarsModule player;
    double xInitial = 50;
    double yInitial = 50;
-   double playerWidth = landingLegs.getWidth(); 
-   double playerHeight = landingLegs.getHeight();
    
    Rectangle playerHitBox;
    boolean playerCloseToGround = false;
@@ -153,8 +146,7 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
       normalizeAllLines(land); 
       
       // initialize the player
-      player = new MarsModule(
-                              0, map.getPlayerStartY(), playerWidth, playerHeight, 90, 
+      player = new MarsModule(0, map.getPlayerStartY(), 90, 
                               thrustDecelerationRate, rotateDecelerationRate, thrustCap
                               );      
       

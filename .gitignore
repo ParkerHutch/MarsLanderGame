@@ -6,6 +6,5 @@
 /MarsModule.class
 /Particle.class
 /Terrain.class
-/images/
-/landingLegsExtended.png
-/sounds/
+target
+dependency-reduced-pom.xml
