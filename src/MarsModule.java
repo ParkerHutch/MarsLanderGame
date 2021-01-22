@@ -63,14 +63,12 @@ public class MarsModule
    double xDrawPosition = 0;
    
    MarsModule(
-               double x, double y, double w, double h, double a, 
+               double x, double y, double a, 
                double thrustDecelRate, double rotateDecelRate, double tCap
                )
    {
       this.xPos = x;
       this.yPos = y;
-      this.width = w;
-      this.height = h;
       this.angle = a;
       this.thrustDecelerationRate = thrustDecelRate; 
       this.thrustCap = tCap;
@@ -78,7 +76,10 @@ public class MarsModule
       // acceleration rate, which is determined in the settings in the game class
       this.rotateDecelerationRate = rotateDecelRate;
       
-      
+      Image landingLegsExtended = new Image("/images/landingLegsExtended.png");
+      this.width = landingLegsExtended.getWidth();
+      this.height = landingLegsExtended.getHeight();
+
       engineOffSprites[0] = new Image("/images/landingLegsExtended.png");
       engineIgnitedSprites[0] = new Image("/images/ignited1.png");
       
@@ -99,7 +100,7 @@ public class MarsModule
       explosionSprites[5] = new Image("/images/explosion6.png");
       explosionSprites[6] = new Image("/images/explosion7.png");
       
-      blankImage= new Image("/images/blankimage.png"); // blank image for after lander is destroyed
+      //blankImage= new Image("/images/blankimage.png"); // blank image for after lander is destroyed
    }
    
    
@@ -261,7 +262,7 @@ public class MarsModule
 		 }
 		 else
 		 {
-		    currentImage = blankImage;
+		    //currentImage = blankImage;
 		 }
 	  }
 	  

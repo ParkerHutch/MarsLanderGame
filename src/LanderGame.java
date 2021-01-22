@@ -152,10 +152,7 @@ public class LanderGame extends Application implements EventHandler<KeyEvent> {
       normalizeAllLines(land); 
       
       // initialize the player
-      Image landingLegs = new Image("/images/landingLegsExtended.png");
-      double playerWidth = landingLegs.getWidth();
-      double playerHeight = landingLegs.getHeight();
-      player = new MarsModule(0, map.getPlayerStartY(), playerWidth, playerHeight, 90, 
+      player = new MarsModule(0, map.getPlayerStartY(), 90, 
                               thrustDecelerationRate, rotateDecelerationRate, thrustCap
                               );      
       
